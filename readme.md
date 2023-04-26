@@ -120,3 +120,14 @@ terraform init
 terraform validate
 terraform apply
 ```
+To see output without real redeploy of each step from terraform we can do
+```
+terraform refresh
+```
+
+To perform selective apply or destroy use target flag as
+```
+terraform apply -target resource_name
+
+terraform destroy -target resource_name
+```

@@ -153,3 +153,46 @@ resource "aws_instance" "exercise_instance" {
     Name = "exercise_instance"
   }
 }
+
+
+// to print outputs from state list
+// value = resource.propertyname
+
+# output "server_ip" {
+#   value = aws_eip.public_ip
+# }
+
+
+# variable "subnet_prefix" {
+#   description = "cidr block for the subnet"
+
+# }
+
+// variable usage and declaration
+
+# resource "aws_vpc" "prod-vpc" {
+#   cidr_block = "10.0.0.0/16"
+#   tags = {
+#     Name = "production"
+#   }
+# }
+
+# resource "aws_subnet" "subnet-1" {
+#   vpc_id            = aws_vpc.prod-vpc.id
+#   cidr_block        = var.subnet_prefix[0].cidr_block
+#   availability_zone = "us-east-1a"
+
+#   tags = {
+#     Name = var.subnet_prefix[0].name
+#   }
+# }
+
+# resource "aws_subnet" "subnet-2" {
+#   vpc_id            = aws_vpc.prod-vpc.id
+#   cidr_block        = var.subnet_prefix[1].cidr_block
+#   availability_zone = "us-east-1a"
+
+#   tags = {
+#     Name = var.subnet_prefix[1].name
+#   }
+# }
